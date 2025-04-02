@@ -35,7 +35,8 @@ MDTM coolzip.zip
 ```
 
 The files `main` and `coolzip.zip` are transmitted later (in TCP stream 12 and 16 respectively)
-We can see from the hex representations that `main` is a Linux executable (ELF) and that `coolzip.zip` is unsurprisingly a ZIP archive. The latter also contains a file called `flag.txt`: ![[dicecap1.png]]
+We can see from the hex representations that `main` is a Linux executable (ELF) and that `coolzip.zip` is unsurprisingly a ZIP archive. The latter also contains a file called `flag.txt`:
+![hex representation of coolzip.zip](https://raw.githubusercontent.com/VuwCTF/writeups/refs/heads/main/diceCTF25/dicecap1.png)
 Downloading and attempting to extract it reveals it is password protected. Opening the ELF in Ghidra shows a function `generate_password`. On completion, it prints `The password is: ` then the result of three `strcat` operations. This means the password is split into three components.
 
 The first gets the current time using `time(nullptr)`, returning the Unix time in seconds. It then divides the result, casted to an int, by 60, then multiplies by 60. Because this is integer division, it has the effect of rounding down to the nearest minute. The messages earlier in the communication end with what appear to be Unix timestamps, so we can copy them and round them down:
