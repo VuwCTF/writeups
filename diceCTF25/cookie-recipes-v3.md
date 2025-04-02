@@ -1,0 +1,8 @@
+#### Intended solution
+The site initially has 0 cookies, and requires 1 billion cookies in order to obtain the flag. More specifically, the number of cookies must not be less than 1 billion. Looking at the three other buttons, we can see that the first two make `POST` requests to `/bake` with the query parameter `number` specifying how many cookies to make. Attempting to bake 1 billion cookies however returns an error: `that is too many cookies`.
+Looking at the back-end file provided, we can see that the number of cookies is not checked numerically; in fact it is only turned into a number when modifying the database. The length is instead checked using the *string length*.
+This means we can send a non-numerical value that is 2 or fewer character in length to `/bake` which will fail to convert to a number, instead returning `NaN`. Because this is JS, [any comparison involving `NaN` returns false](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN). Because of the way the `/deliver` endpoint is structured, the comparison `current < target` will return false (as `current` is `NaN`) and we will receive the flag.
+
+**`dice{cookie_cookie_cookie}`**
+#### Unintended solution
+The user information is separated by a `user` cookie. Changing this to 1 revealed that someone had already obtained `NaN` cookies, which allowed us to grab the flag without technically solving the challenge. Oops

@@ -1,0 +1,2 @@
+We are provided a LaTeX-style PDF containing documentation on a Soviet CPU. Scrolling through the document shows many redacted sections, so attempting to ctrl-f the flag format `dice{` reveals the flag not hidden behind a black box but instead in the blank section between the title and the authors. The full hidden message reads: `FLAG: dice{r3ad1ng_th4_d0cs_71ccd}`
+**`dice{r3ad1ng_th4_d0cs_71ccd}`**
