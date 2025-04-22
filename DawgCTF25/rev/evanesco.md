@@ -1,0 +1,2 @@
+We're given a binary with a bunch of unused variables with values in them following the format \_\_81a0f3_\_81a0f3 (the \_'s being characters that change between variables). The description indicates that the flag is within these. Putting them in cyberchef (backwards) and using the from hex and then escape unicode characters in the recipe section will get a bunch of unicode. Getting rid of the U+DB40s between every character and converting to normal letters gets the flag:
+||DawgCTF{u_can_tag_but_u_cant_hide}||
