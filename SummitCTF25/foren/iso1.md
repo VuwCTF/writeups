@@ -1,0 +1,1 @@
+Mounting the ISO shows several unassuming files. Highlighting the contents of the Logs file shows a series of tabs and spaces after the blank entries. Decoding these as tab = 1, space = 0, and ignoring the single tab lines gives the flag.

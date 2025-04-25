@@ -1,0 +1,1 @@
+You were given 1 docx file for each challenge. If you command f to search for "Summit", you will find the flag hidden as tiny in each one, but in various spots, and blocking you using various methods. Just copy paste the flag somewhere else and it will become visible.
