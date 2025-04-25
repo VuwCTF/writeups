@@ -1,2 +1,2 @@
 We're given a pcap file. Open it in Wireshark and filter with tcp.flags.urg (as indicated by the hint). In most of the FTP packets, we can see only a few characters are changing each time. Looking at those characters in the more convoluted packets, you can see an F{ in one of them, which looks like part of the flag. Ignoring the other changing characters besides the ones in the place of the F{, you can construct the flag by looking at all of the FTP packets:
-||DawgCTF{villagers_bonds}||
+DawgCTF{villagers_bonds}
