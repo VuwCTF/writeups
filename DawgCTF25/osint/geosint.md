@@ -16,6 +16,8 @@
 
 9) looking up japanese gondola city overlook gives several options, including the mt. hakodate ropeway. this matches with the pylons and the view.
 
+10) unsolved
+
 11) using google lens, the building with the argentine flag is identified as the groussac refuge on petermann island in argentine antarctica.
 
 12) using google lens with the ticket gates gives the Morgan Blvd station outside washington DC.
